@@ -12,7 +12,6 @@ export class AppComponent {
   ShowHide: boolean = false;
 
   FunShowHide() {
-    
     if(this.ShowHide){
       this.displayedColumns.pop();
     }else{
