@@ -1,4 +1,16 @@
-<h3>Show Hide columns using Datatable.</h3>
+<mat-card class="result">
+  <mat-card-content>
+    <h2 class="example-h2">Show Hide columns using Datatable.</h2>
+
+    <section class="example-section">
+      <mat-slide-toggle
+          class="example-margin"
+          color="primary" [(ngModel)]="ShowHide" (change)="FunShowHide()" >
+        Hide Column: {{ShowHide}}
+      </mat-slide-toggle>
+    </section>
+  </mat-card-content>
+</mat-card>
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -19,7 +31,7 @@
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="Designation">
+  <ng-container *ngIf="!ShowHide" matColumnDef="Designation">
     <th mat-header-cell *matHeaderCellDef> Designation </th>
     <td mat-cell *matCellDef="let element"> {{element.Designation}} </td>
   </ng-container>
