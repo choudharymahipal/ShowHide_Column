@@ -3,19 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-name = "Angular";
-  displayedColumns: string[] = ["id", "name", "Designation"];
+  name = 'Angular';
+  displayedColumns: string[] = ['id', 'name', 'Designation'];
   dataSource = ELEMENT_DATA;
   ShowHide: boolean = false;
 
   FunShowHide() {
-    if(this.ShowHide){
+    if (this.ShowHide) {
       this.displayedColumns.pop();
-    }else{
-      this.displayedColumns.push("Designation");
+    } else {
+      this.displayedColumns.push('Designation');
     }
   }
 }
@@ -27,10 +27,9 @@ export interface EmpData {
 }
 
 const ELEMENT_DATA: EmpData[] = [
-  { id: 1, name: "Manoj Puri", Designation: "Team Leader" },
-  { id: 2, name: "Mahipal Choudhary", Designation: "Developer" },
-  { id: 3, name: "Meghna Kumari", Designation: "Developer" },
-  { id: 4, name: "Manoj jangid", Designation: "Developer" },
-  { id: 5, name: "Praveen Rathore", Designation: "Developer" }
+  { id: 1, name: 'Manoj Puri', Designation: 'Team Leader' },
+  { id: 2, name: 'Mahipal Choudhary', Designation: 'Developer' },
+  { id: 3, name: 'Meghna Kumari', Designation: 'Developer' },
+  { id: 4, name: 'Manoj jangid', Designation: 'Developer' },
+  { id: 5, name: 'Praveen Rathore', Designation: 'Developer' },
 ];
-
